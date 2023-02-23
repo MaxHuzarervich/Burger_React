@@ -3,7 +3,9 @@ import style from './Header.module.css'
 import logo from '../../assets/img/logo.svg'
 import { Container } from "../Container/Container";
 
-export const Header = ({}) => {
+//header
+
+export const Header = () => {
     return (
         <header className={style.header}>
     <Container className={style.header__container}>
