@@ -59,6 +59,10 @@ const orderSlice = createSlice({
             } else {
                 state.orderList = state.orderList.filter(item => item.id !== action.payload.id)
             }
+        },
+        clearOrder: (state) => {
+            state.orderList = []
+            state.orderGoods = []
         }
     },
     extraReducers: builder => {
@@ -96,5 +100,5 @@ export const orderRequestAsync = createAsyncThunk(
     }
 )
 
-export const {addProduct, removeProduct} = orderSlice.actions
+export const {addProduct, removeProduct, clearOrder} = orderSlice.actions
 export default orderSlice.reducer
